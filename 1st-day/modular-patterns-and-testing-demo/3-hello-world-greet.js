@@ -1,3 +1,3 @@
 'use strict';
-var greet = require(__dirname + '/2-greet');
+var greet = require(__dirname + '/3-greet-exports').greet;
 console.log(greet('unicorn'));
