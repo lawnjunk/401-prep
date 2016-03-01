@@ -1,3 +1,5 @@
+'use strict';
+
 var outsideName = null;
 var greet = module.exports = function(name){
   var name = outsideName = outsideName || name;
