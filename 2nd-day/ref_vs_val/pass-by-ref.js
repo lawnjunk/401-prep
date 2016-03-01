@@ -1,4 +1,5 @@
 'use strict';
+
 var point = {
   x: 5,
   y: 4

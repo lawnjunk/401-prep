@@ -4,6 +4,7 @@ Pass by Reference vs. Pass by Value
 # Pass by Reference
 ``` javascript 
 'use strict';
+
 var point = {
   x: 5,
   y: 4
