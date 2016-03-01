@@ -171,7 +171,7 @@ gulp.task('lint', function(){
  * `--save-dev`
 
 # Passed by ref vs. value
-** Pass by Referencei **
+**Pass by Reference**
 ``` javascript 
 'use strict';
 
@@ -191,7 +191,7 @@ console.log('result addOne : ', addOne(point));
 console.log('point         : ', point);
 ```
 
-** Pass by Value **
+**Pass by Value**
 ``` javascript 
 'use strict';
 
