@@ -1,7 +1,7 @@
 {
-  "name": "2nd-day",
-  "version": "1.0.0",
-  "description": "",
+  "name": "hello-cli-test",
+  "version": "0.0.1",
+  "description": "a demo to demonstrate testing hello-greet cli, for sea-401d2-js",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
+    "gulp": "^3.9.1",
     "gulp-eslint": "^2.0.0"
   }
 }

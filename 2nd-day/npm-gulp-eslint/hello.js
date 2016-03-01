@@ -1,4 +1,5 @@
 'use strict';
+
 var greet = require(__dirname + '/lib/greet');
 
 var hello = module.exports = exports = function(){
