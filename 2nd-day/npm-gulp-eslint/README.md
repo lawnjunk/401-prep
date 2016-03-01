@@ -107,3 +107,69 @@ describe('hello function', function(){
   });
 });
 ```
+
+# gulp
+* automation
+* [Getting Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+* [Api Docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+
+**gulpfile.js**
+``` javascript
+'use strict';
+
+var gulp = require('gulp');
+var eslint = require('gulp-eslint');
+
+var files = ['gulpfile.js', __dirname + '/lib/**/*.js', __dirname + '/test/**/*.js', 'hello.js'];
+gulp.task('lint', function(){
+  return gulp.src(files)
+    .pipe(eslint())
+    .pipe(eslint.format());
+});
+```
+
+# eslint
+* javascript linter
+* make sure to include mocha globals
+
+``` json
+{
+  "rules": {
+    "no-console": 0,
+    "indent": [
+      2,
+      2
+    ],
+    "quotes": [
+      2,
+      "single"
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+        ],
+        "semi": [
+          2,
+          "always"
+        ]
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "describe": false,
+    "it": false,
+    "beforeEach": false,
+    "afterEach": false,
+    "before": false,
+    "after": false
+  },
+  "ecmaFeatures": {
+    "modules": true,
+    "experimentalObjectRestSpread": true
+  },
+  "extends": "eslint:recommended"
+}
+```
