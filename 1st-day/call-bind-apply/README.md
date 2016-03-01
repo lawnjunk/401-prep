@@ -56,4 +56,6 @@ this.sayMyName()
 }).call(slug)
 ```
 
+# apply
+* calls a function with a given this value and arguments provided as an array
 
