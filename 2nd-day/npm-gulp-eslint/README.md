@@ -2,7 +2,7 @@ npm gulp eslint
 ===============
 
 # npm
-[npm](https://npmjs.com)
+[npm](https://npmjs.com)  
 * a package manager for node.js
 * the *npm Registry* is a collection of packages and open source code for the JS community
 * `npm` is a command line client*(cli)* that allows developers to insall and publish those packages
