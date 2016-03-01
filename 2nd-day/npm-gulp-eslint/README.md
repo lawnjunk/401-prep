@@ -129,6 +129,8 @@ gulp.task('lint', function(){
 ```
 
 # eslint
+[Getting Started](http://eslint.org/docs/user-guide/getting-started)
+[Advanced Configuration](http://eslint.org/docs/user-guide/configuring)
 * javascript linter
 * make sure to include mocha globals
 
