@@ -1,4 +1,5 @@
-**/Users/nacnud/gitz/codefellows/401-prep/3rd-day//buffer/buffer-demo.js**
+### buffer
+**buffer/buffer-demo.js**
 ``` javascript
 'use strict';
 
@@ -41,7 +42,8 @@ console.log('helloBuf.toString()           : ', helloBuf);
 
 ```
 
-**/Users/nacnud/gitz/codefellows/401-prep/3rd-day//call-stack/call-stack-demo.js**
+### call-stack
+**call-stack/call-stack-demo.js**
 ``` javascript
 'use strict';
 
@@ -67,7 +69,8 @@ first();
 console.log('end');
 ```
 
-**/Users/nacnud/gitz/codefellows/401-prep/3rd-day//event-loop/fs-event-loop.js**
+### event-loop
+**event-loop/fs-event-loop.js**
 ``` javascript
 'use strict';
 var fs = require('fs');
@@ -93,7 +96,7 @@ fs.readFile('./txt/file-two.txt', function(err, data){
 });
 ```
 
-**/Users/nacnud/gitz/codefellows/401-prep/3rd-day//event-loop/hello-event-loop.js**
+**event-loop/hello-event-loop.js**
 ``` javascript
 'use strict';
 
@@ -111,8 +114,29 @@ process.nextTick(function(){
 console.log('first log');
 ```
 
-### /Users/nacnud/gitz/codefellows/401-prep/3rd-day//event-loop/txt
-**/Users/nacnud/gitz/codefellows/401-prep/3rd-day//fs-module/fs-demo.js**
+### event-loop/txt
+**event-loop/txt/file-four.txt**
+``` javascript
+file-four
+```
+
+**event-loop/txt/file-one.txt**
+``` javascript
+file-one
+```
+
+**event-loop/txt/file-three.txt**
+``` javascript
+file-three
+```
+
+**event-loop/txt/file-two.txt**
+``` javascript
+file-two
+```
+
+### fs-module
+**fs-module/fs-demo.js**
 ``` javascript
 var fs = require('fs');
 
@@ -128,7 +152,7 @@ fs.readFile('./helloworld.txt', function(err, data){
 
 ```
 
-**/Users/nacnud/gitz/codefellows/401-prep/3rd-day//fs-module/helloworld.txt**
+**fs-module/helloworld.txt**
 ``` javascript
 hello, world in a file!
 ```
