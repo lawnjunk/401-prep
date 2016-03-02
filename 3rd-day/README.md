@@ -1,4 +1,118 @@
-### buffer
+**fs-module/helloworld.txt**
+``` javascript
+hello, world in a file!
+```
+
+**fs-module/fs-demo.js**
+``` javascript
+var fs = require('fs');
+
+fs.readFile('./does-not-exist', function(err, data){
+  if (err) throw err;
+  console.log(data.toString());
+});
+
+fs.readFile('./helloworld.txt', function(err, data){
+  if (err) throw err;
+  console.log(data.toString());
+});
+
+```
+
+### fs-module
+**event-loop/txt/file-two.txt**
+``` javascript
+file-two
+```
+
+**event-loop/txt/file-three.txt**
+``` javascript
+file-three
+```
+
+**event-loop/txt/file-one.txt**
+``` javascript
+file-one
+```
+
+**event-loop/txt/file-four.txt**
+``` javascript
+file-four
+```
+
+### event-loop/txt
+**event-loop/hello-event-loop.js**
+``` javascript
+'use strict';
+
+process.nextTick(function(){
+  console.log('slug: whats up ma dude?');
+});
+
+process.nextTick(function(){
+  process.nextTick(function(){
+    console.log('slug: so good to here that!');
+  });
+  console.log('madude: jus been haxin the mainframe, hella!');
+});
+
+console.log('first log');
+```
+
+**event-loop/fs-event-loop.js**
+``` javascript
+'use strict';
+var fs = require('fs');
+
+process.nextTick(function(){
+  fs.readFile('./txt/file-one.txt', function(err, data){
+    console.log('hello from first callback');
+    console.log('fist callback data: ' + data.toString());
+    fs.readFile('./txt/file-three.txt', function(err, data){
+      console.log('hello from three callback');
+      console.log('third callback data: ' + data.toString());
+    });
+  });
+});
+
+fs.readFile('./txt/file-two.txt', function(err, data){
+  console.log('hello from second callback');
+  console.log('second callback data: ' + data.toString());
+    fs.readFile('./txt/file-four.txt', function(err, data){
+      console.log('hello from forth callback');
+      console.log('forth callback data: ' + data.toString());
+    });
+});
+```
+
+### event-loop
+**call-stack/call-stack-demo.js**
+``` javascript
+'use strict';
+
+function third(){
+  console.log('invoded function third');
+  return
+}
+
+function second(){
+  console.log('invoded function second');
+  third();
+  return
+}
+
+function first(){
+  console.log('invoded function first');
+  second();
+  return
+}
+
+console.log('start');
+first();
+console.log('end');
+```
+
+### call-stack
 **buffer/buffer-demo.js**
 ``` javascript
 'use strict';
@@ -42,118 +156,4 @@ console.log('helloBuf.toString()           : ', helloBuf);
 
 ```
 
-### call-stack
-**call-stack/call-stack-demo.js**
-``` javascript
-'use strict';
-
-function third(){
-  console.log('invoded function third');
-  return
-}
-
-function second(){
-  console.log('invoded function second');
-  third();
-  return
-}
-
-function first(){
-  console.log('invoded function first');
-  second();
-  return
-}
-
-console.log('start');
-first();
-console.log('end');
-```
-
-### event-loop
-**event-loop/fs-event-loop.js**
-``` javascript
-'use strict';
-var fs = require('fs');
-
-process.nextTick(function(){
-  fs.readFile('./txt/file-one.txt', function(err, data){
-    console.log('hello from first callback');
-    console.log('fist callback data: ' + data.toString());
-    fs.readFile('./txt/file-three.txt', function(err, data){
-      console.log('hello from three callback');
-      console.log('third callback data: ' + data.toString());
-    });
-  });
-});
-
-fs.readFile('./txt/file-two.txt', function(err, data){
-  console.log('hello from second callback');
-  console.log('second callback data: ' + data.toString());
-    fs.readFile('./txt/file-four.txt', function(err, data){
-      console.log('hello from forth callback');
-      console.log('forth callback data: ' + data.toString());
-    });
-});
-```
-
-**event-loop/hello-event-loop.js**
-``` javascript
-'use strict';
-
-process.nextTick(function(){
-  console.log('slug: whats up ma dude?');
-});
-
-process.nextTick(function(){
-  process.nextTick(function(){
-    console.log('slug: so good to here that!');
-  });
-  console.log('madude: jus been haxin the mainframe, hella!');
-});
-
-console.log('first log');
-```
-
-### event-loop/txt
-**event-loop/txt/file-four.txt**
-``` javascript
-file-four
-```
-
-**event-loop/txt/file-one.txt**
-``` javascript
-file-one
-```
-
-**event-loop/txt/file-three.txt**
-``` javascript
-file-three
-```
-
-**event-loop/txt/file-two.txt**
-``` javascript
-file-two
-```
-
-### fs-module
-**fs-module/fs-demo.js**
-``` javascript
-var fs = require('fs');
-
-fs.readFile('./does-not-exist', function(err, data){
-  if (err) throw err;
-  console.log(data.toString());
-});
-
-fs.readFile('./helloworld.txt', function(err, data){
-  if (err) throw err;
-  console.log(data.toString());
-});
-
-```
-
-**fs-module/helloworld.txt**
-``` javascript
-hello, world in a file!
-```
-
+### buffer
