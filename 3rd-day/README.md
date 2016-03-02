@@ -1,5 +1,5 @@
-## 1-buffer
-**1-buffer/buffer-demo.js**
+## buffer
+**buffer/buffer-demo.js**
 ``` javascript
 'use strict';
 
@@ -42,30 +42,8 @@ console.log('helloBuf.toString()           : ', helloBuf);
 
 ```
 
-## 2-fs-module
-**2-fs-module/fs-demo.js**
-``` javascript
-var fs = require('fs');
-
-fs.readFile('./does-not-exist', function(err, data){
-  if (err) throw err;
-  console.log(data.toString());
-});
-
-fs.readFile('./helloworld.txt', function(err, data){
-  if (err) throw err;
-  console.log(data.toString());
-});
-
-```
-
-**2-fs-module/helloworld.txt**
-``` javascript
-hello, world in a file!
-```
-
-## 3-callstack
-**3-callstack/call-stack-demo.js**
+## call-stack
+**call-stack/call-stack-demo.js**
 ``` javascript
 'use strict';
 
@@ -91,8 +69,8 @@ first();
 console.log('end');
 ```
 
-## 4-event-loop
-**4-event-loop/fs-event-loop.js**
+## event-loop
+**event-loop/fs-event-loop.js**
 ``` javascript
 'use strict';
 var fs = require('fs');
@@ -118,7 +96,7 @@ fs.readFile('./txt/file-two.txt', function(err, data){
 });
 ```
 
-**4-event-loop/hello-event-loop.js**
+**event-loop/hello-event-loop.js**
 ``` javascript
 'use strict';
 
@@ -136,24 +114,46 @@ process.nextTick(function(){
 console.log('first log');
 ```
 
-## 4-event-loop/txt
-**4-event-loop/txt/file-four.txt**
+## event-loop/txt
+**event-loop/txt/file-four.txt**
 ``` javascript
 file-four
 ```
 
-**4-event-loop/txt/file-one.txt**
+**event-loop/txt/file-one.txt**
 ``` javascript
 file-one
 ```
 
-**4-event-loop/txt/file-three.txt**
+**event-loop/txt/file-three.txt**
 ``` javascript
 file-three
 ```
 
-**4-event-loop/txt/file-two.txt**
+**event-loop/txt/file-two.txt**
 ``` javascript
 file-two
+```
+
+## fs-module
+**fs-module/fs-demo.js**
+``` javascript
+var fs = require('fs');
+
+fs.readFile('./does-not-exist', function(err, data){
+  if (err) throw err;
+  console.log(data.toString());
+});
+
+fs.readFile('./helloworld.txt', function(err, data){
+  if (err) throw err;
+  console.log(data.toString());
+});
+
+```
+
+**fs-module/helloworld.txt**
+``` javascript
+hello, world in a file!
 ```
 
