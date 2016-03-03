@@ -17,3 +17,5 @@ console.log('peeking shortStack: ' + shortStack.peek());
 console.log('poping shortStack: ' + shortStack.pop());
 console.log('poping shortStack: ' + shortStack.pop());
 console.log('poping shortStack: ' + shortStack.pop());
+
+
