@@ -1,6 +1,6 @@
-## async-testing  
-**async-testing/package.json**  
-``` javascript  
+##/async-testing  
+**/async-testing/package.json**  
+``` json  
 {
   "name": "async-testing",
   "version": "1.0.0",
@@ -20,10 +20,9 @@
   "license": "ISC"
 }
 ```  
-
-## async-testing/test  
-**async-testing/test/async-testing-demo.js**  
-``` javascript  
+##/async-testing/test  
+**/async-testing/test/async-testing-demo.js**  
+``` js  
 'use strict';
 
 const fs = require('fs');
@@ -45,15 +44,13 @@ describe('testing fs module async testing', () => {
   });
 });
 ```  
-
-**async-testing/test/hello-world.txt**  
-``` javascript  
+**/async-testing/test/hello-world.txt**  
+``` txt  
 hello, world
 ```  
-
-## bitmaps  
-**bitmaps/bitmap.js**  
-``` javascript  
+##/bitmaps  
+**/bitmaps/bitmap.js**  
+``` js  
 'use strict';
 
 const fs = require('fs');
@@ -76,10 +73,12 @@ fs.readFile(bitmapPath, (err, data) => {
 
 
 ```  
-
-## call-bind  
-**call-bind/bind-set-function-context.js**  
-``` javascript  
+##/bitmaps/img  
+![](/bitmaps/img/non-palette-bitmap.bmp)  
+![](/bitmaps/img/palette-bitmap.bmp)  
+##/call-bind  
+**/call-bind/bind-set-function-context.js**  
+``` js  
 'use strict';
 
 var slug = {name: 'neo'} ;
@@ -90,9 +89,8 @@ function sayHello (){
 sayHelloSlug = sayHello.bind(slug);
 sayHelloSlug();
 ```  
-
-**call-bind/bind-steal-array-methods.js**  
-``` javascript  
+**/call-bind/bind-steal-array-methods.js**  
+``` js  
 const Stack = function(input){
   var data = input || [];
   this.push = Array.prototype.push.bind(data);
@@ -115,9 +113,8 @@ console.log('poping shortStack: ' + shortStack.pop());
 
 
 ```  
-
-**call-bind/call-inheritance.js**  
-``` javascript  
+**/call-bind/call-inheritance.js**  
+``` js  
 'use strict';
 
 function Person(name, age){
@@ -137,9 +134,8 @@ function Hero(hero, name, age, power){
 
 console.log( new Hero('yes', 'super lulwat', 33, 'hacking'));
 ```  
-
-**call-bind/call-specify-function-context.js**  
-``` javascript  
+**/call-bind/call-specify-function-context.js**  
+``` js  
 'use strict';
 
 var Slug = function(){
@@ -170,10 +166,9 @@ sayHello.call(neo);
 
 
 ```  
-
-## event-emitters  
-**event-emitters/ee-demo.js**  
-``` javascript  
+##/event-emitters  
+**/event-emitters/ee-demo.js**  
+``` js  
 'use strict';
 
 const EE = require('events').EventEmitter;
@@ -201,9 +196,8 @@ ee.on('three:done', ()=>{
 
 ee.emit('one:done');
 ```  
-
-**event-emitters/ee-recursion-demo.js**  
-``` javascript  
+**/event-emitters/ee-recursion-demo.js**  
+``` js  
 const EE = require('events').EventEmitter;
 const fs = require('fs');
 
@@ -222,20 +216,16 @@ ee.on('readone', (options) => {
 ee.emit('readone', {files: ['./txt/one.txt', './txt/two.txt', './txt/three.txt']});
 
 ```  
-
-## event-emitters/txt  
-**event-emitters/txt/one.txt**  
-``` javascript  
+##/event-emitters/txt  
+**/event-emitters/txt/one.txt**  
+``` txt  
 one
 ```  
-
-**event-emitters/txt/three.txt**  
-``` javascript  
+**/event-emitters/txt/three.txt**  
+``` txt  
 three
 ```  
-
-**event-emitters/txt/two.txt**  
-``` javascript  
+**/event-emitters/txt/two.txt**  
+``` txt  
 two
 ```  
-
