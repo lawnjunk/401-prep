@@ -92,9 +92,10 @@ exports.goodbye = function(){
  * How much to test at a time
  * What to call the tests
 
-# Mocha
+## Mocha
  * unit testing framework
- * used to describe and run tests for functions 
-# Chai
+ * used to describe and run tests for functions  
+ 
+## Chai
  * assertion library
 
