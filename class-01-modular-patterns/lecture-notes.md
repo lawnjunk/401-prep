@@ -96,6 +96,11 @@ exports.goodbye = function(){
  * unit testing framework
  * used to describe and run tests for functions  
  
+## Node Assert Module
+* assertion library
+* used to compare different types and throw errors
+
 ## Chai
  * assertion library
+ * used to intelegently compare javascript types and throw meaningful errors 
 
